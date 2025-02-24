@@ -6,27 +6,29 @@
     <title>Seconda Pagina</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #007BFF, #0056b3);
+            background: #1a1a1a;
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
         header {
             padding: 20px;
-            font-size: 2rem;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 2.5rem;
+            font-weight: 600;
+            background-color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #444;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             opacity: 0;
             transform: translateY(20px);
@@ -37,18 +39,18 @@
             padding: 12px 25px;
             margin-top: 20px;
             font-size: 1.2rem;
-            background: #ff477e;
+            background-color: #ff477e;
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: transform 0.3s ease, background 0.3s;
+            transition: transform 0.3s ease, background-color 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .btn:hover {
-            background: #ff1a5e;
-            transform: scale(1.15);
+            background-color: #ff1a5e;
+            transform: scale(1.1);
         }
         @keyframes fadeIn {
             from {
@@ -64,41 +66,44 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 20px;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.2);
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 50px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             transition: 0.3s ease-in-out;
         }
         nav:hover {
             transform: scale(1.05);
         }
         .menu-button {
-            background: linear-gradient(145deg, #ff477e, #ff1a5e);
+            background-color: #444;
+            color: #fff;
             padding: 15px 30px;
-            border-radius: 30px;
+            border-radius: 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 1px;
             cursor: pointer;
-            font-size: 1.2rem;
-            color: white;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            display: flex;
+            border: none;
+            transition: 0.3s ease;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
         .menu-button:hover {
-            background: linear-gradient(145deg, #ff1a5e, #ff477e);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background-color: #ff477e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .menu-button:focus {
+            outline: none;
         }
         .icon {
             font-size: 1.5rem;
-        }
-        .menu-button span {
-            font-weight: bold;
         }
     </style>
 </head>
@@ -112,4 +117,10 @@
         <a href="ftp.html" class="menu-button">📂 <span>FTP</span></a>
         <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
     </nav>
-    
+    <div class="container">
+        <h2>Pagina Secondaria</h2>
+        <p>Qui troverai altri contenuti interessanti.</p>
+        <a href="index.html" class="btn">Torna alla Home</a>
+    </div>
+</body>
+</html>
