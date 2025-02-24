@@ -69,7 +69,21 @@
         .text {
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 1s ease-out 0.3s forwards;
+            animation: textFadeIn 1s ease-out 0.3s forwards;
+        }
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(0px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1);
+            }
         }
         nav {
             display: flex;
@@ -94,25 +108,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
         .menu-button:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.1);
-        }
-        .home-button {
-            display: block;
-            margin: 30px auto;
-            padding: 15px 25px;
-            font-size: 1.2rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-        }
-        .home-button:hover {
             background: rgba(255, 255, 255, 0.4);
             transform: scale(1.1);
         }
@@ -121,18 +119,17 @@
 <body>
     <header>Introduzione al Progetto di Rete</header>
     <nav>
-        <button class="menu-button">🏠 <span>Introduzione</span></button>
-        <button class="menu-button">📍 <span>Sedi</span></button>
-        <button class="menu-button">🔄 <span>Switch</span></button>
-        <button class="menu-button">📡 <span>Router</span></button>
-        <button class="menu-button">📂 <span>FTP</span></button>
-        <button class="menu-button">🏁 <span>Conclusioni</span></button>
+        <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
+        <a href="sedi.html" class="menu-button">📍 <span>Sedi</span></a>
+        <a href="switch.html" class="menu-button">🔄 <span>Switch</span></a>
+        <a href="router.html" class="menu-button">📡 <span>Router</span></a>
+        <a href="ftp.html" class="menu-button">📂 <span>FTP</span></a>
+        <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
     </nav>
     <div class="container">
         <h2 class="text">Panoramica Generale</h2>
         <p class="text">Questo progetto illustra la rete di un'officina meccanica, suddivisa in tre sedi principali: amministrazione, magazzino e officina. Le tre sedi sono collegate tramite un routing dinamico e una configurazione seriale, garantendo una comunicazione efficiente e sicura. Ogni sezione della rete è stata progettata per ottimizzare la connettività e la gestione delle risorse.</p>
         <img src="retemeccanico.png" alt="Schema della rete del meccanico" class="network-image">
     </div>
-    <button class="home-button" onclick="location.href='pagina2.html'">🔙 Torna al Menu</button>
 </body>
 </html>
