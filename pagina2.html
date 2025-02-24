@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina 2</title>
+    <title>Seconda Pagina</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #4a90e2, #007aff);
+            background: linear-gradient(135deg, #007BFF, #0056b3);
             color: white;
             text-align: center;
+            overflow-x: hidden;
         }
         header {
             padding: 20px;
@@ -27,33 +28,72 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
         }
         .btn {
             display: inline-block;
             padding: 10px 20px;
             margin-top: 20px;
             font-size: 1rem;
-            background: #005ecb;
+            background: #ff477e;
             color: white;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: transform 0.3s ease, background 0.3s;
             text-decoration: none;
         }
         .btn:hover {
-            background: #003f8c;
+            background: #ff1a5e;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .menu-button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .menu-button:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <header>Pagina 2 Super Figa</header>
+    <header>Seconda Pagina Fighissima</header>
+    <nav>
+        <button class="menu-button">🏠 Introduzione</button>
+        <button class="menu-button">📍 Sedi</button>
+        <button class="menu-button">🔄 Switch</button>
+        <button class="menu-button">📡 Router</button>
+        <button class="menu-button">📂 FTP</button>
+        <button class="menu-button">🏁 Conclusioni</button>
+    </nav>
     <div class="container">
-        <h2>Benvenuto sulla seconda pagina!</h2>
-        <p>Questa è una pagina di esempio con testo casuale.</p>
-        <p>Qui potrai scrivere quello che vuoi.</p>
-        <p>Modifica questa pagina come preferisci.</p>
-        <a href="index.html" class="btn">Torna alla pagina principale</a>
+        <h2>Pagina Secondaria</h2>
+        <p>Qui troverai altri contenuti interessanti.</p>
+        <a href="index.html" class="btn">Torna alla Home</a>
     </div>
 </body>
 </html>
