@@ -39,6 +39,7 @@
             border-radius: 25px;
             cursor: pointer;
             transition: 0.3s;
+            text-decoration: none;
         }
         .btn:hover {
             background: #ff1a5e;
@@ -48,9 +49,54 @@
 <body>
     <header>PROGETTO NETWORKING</header>
     <div class="container">
-        <h2>Qui spiegherò nel dettaglio come è stato progettata la mia rete</h2>
-        <p>Per vedere il progetto clicca qui!</p>
-        <button class="btn" onclick="alert('Hai premuto il pulsante!')">Cliccami</button>
+        <h2>Qui spiegherò nel dettaglio la mia rete</h2>
+        <p>Per vederla clicca qui</p>
+        <a href="pagina2.html" class="btn">Vai alla pagina 2</a>
+    </div>
+</body>
+</html>
+
+<!-- Pagina 2 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a85b6, #bac8e0);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>Pagina 2 Fighissima</header>
+    <div class="container">
+        <h2>Sezione di testo casuale</h2>
+        <p>Questo è un paragrafo casuale pieno di cose che potrai modificare.</p>
+        <p>Ancora un altro testo senza senso, perché poi lo cambierai.</p>
+        <p>Un terzo paragrafo, perché tre è un buon numero.</p>
+        <p>Continua a scrivere e personalizzare questa sezione come vuoi!</p>
     </div>
 </body>
 </html>
