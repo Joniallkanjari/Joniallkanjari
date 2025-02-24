@@ -114,6 +114,33 @@
             background: rgba(255, 255, 255, 0.4);
             transform: scale(1.1);
         }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1rem;
+            background: #ff477e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #ff1a5e;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -130,6 +157,8 @@
         <h2 class="text">Panoramica Generale</h2>
         <p class="text">Questo progetto illustra la rete di un'officina meccanica, suddivisa in tre sedi principali: amministrazione, magazzino e officina. Le tre sedi sono collegate tramite un routing dinamico e una configurazione seriale, garantendo una comunicazione efficiente e sicura. Ogni sezione della rete è stata progettata per ottimizzare la connettività e la gestione delle risorse.</p>
         <img src="retemeccanico.png" alt="Schema della rete del meccanico" class="network-image">
+        <a href="pagina2.html" class="btn">Menù</a>
     </div>
 </body>
 </html>
+
