@@ -14,6 +14,7 @@
             background: linear-gradient(135deg, #ff7eb3, #ff758c);
             color: white;
             text-align: center;
+            overflow-x: hidden;
         }
         header {
             padding: 20px;
@@ -29,6 +30,9 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
         }
         .btn {
             display: inline-block;
@@ -40,11 +44,22 @@
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: transform 0.3s ease, background 0.3s;
             text-decoration: none;
         }
         .btn:hover {
             background: #ff1a5e;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
