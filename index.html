@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -15,6 +13,7 @@
             color: white;
             text-align: center;
             overflow-x: hidden;
+            position: relative;
         }
         header {
             padding: 20px;
@@ -61,6 +60,79 @@
                 transform: translateY(0);
             }
         }
+        /* Scia del mouse */
+        .mouse-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff477e;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: trailAnimation 1s ease-out infinite;
+        }
+
+        @keyframes trailAnimation {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Movimenti background icone */
+        .network-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200%;
+            height: 200%;
+            animation: moveIcons 10s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .network-icons img {
+            width: 40px;
+            height: auto;
+            opacity: 0.6;
+            position: absolute;
+            animation: moveIcons 10s linear infinite;
+        }
+
+        .network-icons img:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-duration: 15s;
+        }
+
+        .network-icons img:nth-child(2) {
+            top: 30%;
+            right: 10%;
+            animation-duration: 20s;
+        }
+
+        .network-icons img:nth-child(3) {
+            bottom: 10%;
+            left: 30%;
+            animation-duration: 25s;
+        }
+
+        @keyframes moveIcons {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 10px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -70,5 +142,28 @@
         <p>clicca il bottone per andare avanti</p>
         <a href="pagina2.html" class="btn">CLICCAMI</a>
     </div>
+
+    <!-- Scia del mouse -->
+    <div class="mouse-trail" id="mouseTrail"></div>
+
+    <!-- Icone stilizzate di rete -->
+    <div class="network-icons">
+        <img src="router-icon.png" alt="Router">
+        <img src="laptop-icon.png" alt="Laptop">
+        <img src="wifi-icon.png" alt="WiFi">
+    </div>
+
+    <script>
+        // Scia del mouse
+        const trail = document.getElementById("mouseTrail");
+
+        document.addEventListener("mousemove", (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            trail.style.left = `${x}px`;
+            trail.style.top = `${y}px`;
+        });
+    </script>
 </body>
 </html>
