@@ -146,7 +146,10 @@
     <div class="container">
         <h2 class="text">Le Sedi</h2>
         <p class="text">Il progetto prevede tre sedi principali, ognuna con una propria area funzionale all'interno dell'officina meccanica. Le sedi sono amministrazione, officina e magazzino, tutte interconnesse tramite una rete configurata in modo da garantire efficienza e sicurezza.</p>
-        
+
+        <!-- Immagine prima della sezione "2. Sede Officina" -->
+        <img src="amministrazione_network.png" alt="Schema della rete amministrativa" class="network-image">
+
         <h3 class="text">1. Sede Amministrazione</h3>
         <p class="text">La sede amministrativa gestisce la parte burocratica e finanziaria dell'officina. In questa sede, tutti i dispositivi sono collegati ad uno switch, che è a sua volta è connesso ad un router. Inoltre, è presente un server DNS che fornisce il servizio di risoluzione dei nomi a livello di rete. La configurazione dei dispositivi è la seguente:</p>
         <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
@@ -193,6 +196,9 @@
         </table>
         <p class="text">Tutti i dispositivi sono collegati tramite lo switch che si interfaccia con il router. Il server DNS si trova nella stessa rete e fornisce i servizi di risoluzione dei nomi per l'intera sede.</p>
 
+        <!-- Immagine prima della sezione "3. Sede Magazzino" -->
+        <img src="officina_network.png" alt="Schema della rete officina" class="network-image">
+
         <h3 class="text">2. Sede Officina</h3>
         <p class="text">La sede dell'officina è la zona in cui si svolge la parte operativa della meccanica. Anche qui i dispositivi sono configurati con indirizzi statici, collegati a uno switch che interfaccia con il router.</p>
         <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
@@ -215,30 +221,4 @@
                     <td>PC 13</td>
                     <td>192.168.1.3</td>
                     <td>192.168.1.1</td>
-                    <td>192.168.1.6</td>
-                </tr>
-                <tr>
-                    <td>PC 18</td>
-                    <td>192.168.3.2</td>
-                    <td>192.168.1.4</td>
-                    <td>192.168.1.6</td>
-                </tr>
-                <tr>
-                    <td>PC 19</td>
-                    <td>192.168.3.2</td>
-                    <td>192.168.1.5</td>
-                    <td>192.168.1.6</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 class="text">3. Sede Magazzino</h3>
-        <p class="text">Nella sede del magazzino, i dispositivi, come i PC e gli scanner di codici a barre, sono configurati per ricevere automaticamente un indirizzo IP dal server DHCP presente nella rete. Questo significa che, anziché utilizzare indirizzi IP statici preconfigurati, ogni dispositivo ottiene un indirizzo IP temporaneo ogni volta che si collega alla rete. Questo approccio consente una gestione più flessibile e scalabile degli indirizzi IP, specialmente in ambienti dove i dispositivi possono cambiare frequentemente.In questo modo, l'assegnazione degli indirizzi IP avviene in modo dinamico, con ogni dispositivo che riceve un IP valido e il gateway per comunicare correttamente con la rete locale e la rete esterna, se necessario. L'uso del DHCP semplifica l'amministrazione della rete, evitando conflitti di indirizzi IP e riducendo la necessità di configurazioni manuali.</p>
-        <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
-          
-        </table>
-
-        <a href="pagina2.html" class="btn">Menu</a>
-    </div>
-</body>
-</html>
+                    <td>192.168.
