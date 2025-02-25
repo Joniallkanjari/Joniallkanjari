@@ -16,12 +16,25 @@
         }
         header {
             padding: 20px;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-family: 'Cinzel', serif;
             font-weight: 600;
-            background-color: #333;
+            color: #ffd700; /* oro metallico */
             text-transform: uppercase;
             letter-spacing: 2px;
             border-bottom: 2px solid #444;
+            animation: shine 2s ease-in-out infinite;
+        }
+        @keyframes shine {
+            0% {
+                text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+            }
+            50% {
+                text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700;
+            }
+            100% {
+                text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+            }
         }
         .container {
             max-width: 800px;
@@ -42,7 +55,7 @@
             background-color: #ff477e;
             color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 25px;
             cursor: pointer;
             transition: transform 0.3s ease, background-color 0.3s ease;
             text-decoration: none;
@@ -65,11 +78,11 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 10px; /* Distanza tra i bottoni più simile al primo codice */
             margin-top: 30px;
             padding: 20px;
             background: rgba(0, 0, 0, 0.3);
-            border-radius: 50px;
+            border-radius: 40px;
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             transition: 0.3s ease-in-out;
@@ -80,9 +93,9 @@
         .menu-button {
             background-color: #444;
             color: #fff;
-            padding: 15px 30px;
-            border-radius: 40px;
-            font-size: 1.1rem;
+            padding: 12px 20px; /* Distanza e dimensione dei bottoni uguali al primo codice */
+            border-radius: 20px; /* Bordi più arrotondati */
+            font-size: 1rem;
             font-weight: 500;
             text-transform: capitalize;
             letter-spacing: 1px;
@@ -91,13 +104,13 @@
             transition: 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            gap: 10px; /* Spazio tra testo e icona */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .menu-button:hover {
             background-color: #ff477e;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .menu-button:focus {
             outline: none;
@@ -124,3 +137,4 @@
     </div>
 </body>
 </html>
+
