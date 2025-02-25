@@ -148,7 +148,7 @@
         <p class="text">Il progetto prevede tre sedi principali, ognuna con una propria area funzionale all'interno dell'officina meccanica. Le sedi sono amministrazione, officina e magazzino, tutte interconnesse tramite una rete configurata in modo da garantire efficienza e sicurezza.</p>
 
         <!-- Immagine prima della sezione "2. Sede Officina" -->
-        <img src="amministrazione_network.png" alt="Schema della rete amministrativa" class="network-image">
+        <img src="amministrazione.png" alt="Schema della rete amministrativa" class="network-image">
 
         <h3 class="text">1. Sede Amministrazione</h3>
         <p class="text">La sede amministrativa gestisce la parte burocratica e finanziaria dell'officina. In questa sede, tutti i dispositivi sono collegati ad uno switch, che è a sua volta è connesso ad un router. Inoltre, è presente un server DNS che fornisce il servizio di risoluzione dei nomi a livello di rete. La configurazione dei dispositivi è la seguente:</p>
@@ -197,7 +197,7 @@
         <p class="text">Tutti i dispositivi sono collegati tramite lo switch che si interfaccia con il router. Il server DNS si trova nella stessa rete e fornisce i servizi di risoluzione dei nomi per l'intera sede.</p>
 
         <!-- Immagine prima della sezione "3. Sede Magazzino" -->
-        <img src="officina_network.png" alt="Schema della rete officina" class="network-image">
+        <img src="officina.png" alt="Schema della rete officina" class="network-image">
 
         <h3 class="text">2. Sede Officina</h3>
         <p class="text">La sede dell'officina è la zona in cui si svolge la parte operativa della meccanica. Anche qui i dispositivi sono configurati con indirizzi statici, collegati a uno switch che interfaccia con il router.</p>
@@ -221,4 +221,82 @@
                     <td>PC 13</td>
                     <td>192.168.1.3</td>
                     <td>192.168.1.1</td>
-                    <td>192.168.
+                    <td>192.168.1.6</td>
+                </tr>
+                <tr>
+                    <td>Server</td>
+                    <td>192.168.1.6</td>
+                    <td>192.168.1.1</td>
+                    <td>192.168.1.6</td>
+                </tr>
+                <tr>
+                    <td>Laptop 0</td>
+                    <td>192.168.1.7</td>
+                    <td>192.168.1.1</td>
+                    <td>192.168.1.6</td>
+                </tr>
+                <tr>
+                    <td>Laptop 2</td>
+                    <td>192.168.1.8</td>
+                    <td>192.168.1.1</td>
+                    <td>192.168.1.6</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text">Anche nella sede dell'officina, i dispositivi sono configurati per una connessione stabile e sicura tramite lo switch.</p>
+
+        <!-- Immagine prima della sezione "4. Conclusioni" -->
+        <img src="magazzino.png" alt="Schema della rete magazzino" class="network-image">
+
+        <h3 class="text">3. Sede Magazzino</h3>
+        <p class="text">Il magazzino è dove vengono conservati i materiali e gli strumenti. La rete in questa sede è configurata simile alle altre, con l'uso di switch per interfacciare i dispositivi al router e garantirne la comunicazione.</p>
+        <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
+            <thead>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>Indirizzo IP</th>
+                    <th>Gateway</th>
+                    <th>Dns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PC 22</td>
+                    <td>192.168.3.2</td>
+                    <td>192.168.3.1</td>
+                    <td>192.168.3.4</td>
+                </tr>
+                <tr>
+                    <td>PC 23</td>
+                    <td>192.168.3.3</td>
+                    <td>192.168.3.1</td>
+                    <td>192.168.3.4</td>
+                </tr>
+                <tr>
+                    <td>Server</td>
+                    <td>192.168.3.4</td>
+                    <td>192.168.3.1</td>
+                    <td>192.168.3.4</td>
+                </tr>
+                <tr>
+                    <td>Laptop 0</td>
+                    <td>192.168.3.5</td>
+                    <td>192.168.3.1</td>
+                    <td>192.168.3.4</td>
+                </tr>
+                <tr>
+                    <td>Laptop 2</td>
+                    <td>192.168.3.6</td>
+                    <td>192.168.3.1</td>
+                    <td>192.168.3.4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="text">Ogni sede è organizzata per funzionare in modo indipendente ma interconnessa tramite la rete centrale, garantendo la massima efficienza operativa.</p>
+    </div>
+    <div class="btn-container">
+        <a href="#" class="btn">Scopri di più</a>
+    </div>
+</body>
+</html>
