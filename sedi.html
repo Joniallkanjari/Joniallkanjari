@@ -134,7 +134,7 @@
     </style>
 </head>
 <body>
-    <header>Sedi del Progetto Rete</header>
+    <header>Sedi</header>
     <nav>
         <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
         <a href="sedi.html" class="menu-button">📍 <span>Sedi</span></a>
@@ -144,79 +144,90 @@
         <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
     </nav>
     <div class="container">
-        <h2 class="text">Le Sedi del Progetto</h2>
+        <h2 class="text">Le Sedi</h2>
         <p class="text">Il progetto prevede tre sedi principali, ognuna con una propria area funzionale all'interno dell'officina meccanica. Le sedi sono amministrazione, officina e magazzino, tutte interconnesse tramite una rete configurata in modo da garantire efficienza e sicurezza.</p>
         
         <h3 class="text">1. Sede Amministrazione</h3>
-        <p class="text">La sede amministrativa gestisce la parte burocratica e finanziaria dell'officina. In questa sede, tutti i dispositivi sono collegati a uno switch, che è a sua volta connesso al router centrale. Inoltre, è presente un server DNS che fornisce il servizio di risoluzione dei nomi a livello di rete. La configurazione dei dispositivi è la seguente:</p>
+        <p class="text">La sede amministrativa gestisce la parte burocratica e finanziaria dell'officina. In questa sede, tutti i dispositivi sono collegati ad uno switch, che è a sua volta è connesso ad un router. Inoltre, è presente un server DNS che fornisce il servizio di risoluzione dei nomi a livello di rete. La configurazione dei dispositivi è la seguente:</p>
         <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
             <thead>
                 <tr>
                     <th>Dispositivo</th>
                     <th>Indirizzo IP</th>
                     <th>Gateway</th>
+                    <th>Dns</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>PC Fisso 1</td>
+                    <td>PC 16</td>
                     <td>192.168.2.2</td>
                     <td>192.168.2.1</td>
+                    <td>192.168.2.4</td>
                 </tr>
                 <tr>
-                    <td>PC Fisso 2</td>
+                    <td>PC 17</td>
                     <td>192.168.2.3</td>
                     <td>192.168.2.1</td>
+                    <td>192.168.2.4</td>
                 </tr>
                 <tr>
                     <td>Server</td>
                     <td>192.168.2.4</td>
                     <td>192.168.2.1</td>
+                    <td>192.168.2.4</td>
                 </tr>
                 <tr>
-                    <td>Access Point</td>
+                    <td>Laptop 0</td>
                     <td>192.168.2.5</td>
                     <td>192.168.2.1</td>
-                </tr>
-                <tr>
-                    <td>Laptop 1</td>
-                    <td>192.168.2.6</td>
-                    <td>192.168.2.1</td>
+                    <td>192.168.2.4</td>
                 </tr>
                 <tr>
                     <td>Laptop 2</td>
-                    <td>192.168.2.7</td>
+                    <td>192.168.2.6</td>
                     <td>192.168.2.1</td>
-                </tr>
-                <tr>
-                    <td>Server DNS</td>
                     <td>192.168.2.4</td>
-                    <td>192.168.2.1</td>
                 </tr>
             </tbody>
         </table>
         <p class="text">Tutti i dispositivi sono collegati tramite lo switch che si interfaccia con il router. Il server DNS si trova nella stessa rete e fornisce i servizi di risoluzione dei nomi per l'intera sede.</p>
 
         <h3 class="text">2. Sede Officina</h3>
-        <p class="text">La sede dell'officina è la zona in cui si svolge la parte operativa della meccanica. Anche qui i dispositivi sono configurati con indirizzi statici, collegati a uno switch che interfaccia con il router. La configurazione dei dispositivi è simile a quella della sede amministrativa.</p>
+        <p class="text">La sede dell'officina è la zona in cui si svolge la parte operativa della meccanica. Anche qui i dispositivi sono configurati con indirizzi statici, collegati a uno switch che interfaccia con il router.</p>
         <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
             <thead>
                 <tr>
                     <th>Dispositivo</th>
                     <th>Indirizzo IP</th>
                     <th>Gateway</th>
+                    <th>Dns</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>PC Officina</td>
-                    <td>192.168.3.2</td>
-                    <td>192.168.3.1</td>
+                    <td>PC 12</td>
+                    <td>192.168.1.2</td>
+                    <td>192.168.1.1</td>
+                    <td>192.168.1.6</td>
                 </tr>
                 <tr>
-                    <td>Macchina Diagnostica</td>
-                    <td>192.168.3.3</td>
-                    <td>192.168.3.1</td>
+                    <td>PC 13</td>
+                    <td>192.168.1.3</td>
+                    <td>192.168.1.1</td>
+                    <td>192.168.1.6</td>
+                </tr>
+                <tr>
+                    <td>PC 18</td>
+                    <td>192.168.3.2</td>
+                    <td>192.168.1.4</td>
+                    <td>192.168.1.6</td>
+                </tr>
+                <tr>
+                    <td>PC 19</td>
+                    <td>192.168.3.2</td>
+                    <td>192.168.1.5</td>
+                    <td>192.168.1.6</td>
                 </tr>
             </tbody>
         </table>
