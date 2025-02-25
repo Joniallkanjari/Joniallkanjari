@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router - Progetto Rete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .network-image {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
+            opacity: 0;
+            animation: fadeInImage 1.2s ease-out 0.5s forwards;
+        }
+        .network-image:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textFadeIn 1s ease-out 0.3s forwards;
+        }
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(0px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1);
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .menu-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 12px 18px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .menu-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1rem;
+            background: #ff477e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #ff1a5e;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>Router nel Progetto Rete</header>
+    <nav>
+        <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
+        <a href="sedi.html" class="menu-button">📍 <span>Sedi</span></a>
+        <a href="switch.html" class="menu-button">🔄 <span>Switch</span></a>
+        <a href="router.html" class="menu-button">📡 <span>Router</span></a>
+        <a href="ftp.html" class="menu-button">📂 <span>FTP</span></a>
+        <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
+    </nav>
+    <div class="container">
+        <h2 class="text">Configurazione dei Router</h2>
+        <p class="text">In questo progetto, sono stati utilizzati tre router per collegare le tre aree principali: amministrazione, officina e magazzino. Ogni router è configurato con il protocollo di routing dinamico RIP per consentire la comunicazione tra le reti.</p>
+        
+        <h3 class="text">Router 1</h3>
+        <p class="text">Il Router 1 collega le reti 192.8.0.0/24 (Amministrazione) e 192.168.2.0/24 (Officina). Ha come indirizzi di interfaccia 192.8.0.2 sulla Serial 2/0 e 192.8.0.1 sulla Serial 3/0.</p>
+        
+        <h3 class="text">Router 2</h3>
+        <p class="text">Il Router 2 collega la rete 192.168.3.0/24 (Magazzino) e 200.100.50.0/24 (Router di collegamento). Le interfacce hanno indirizzi 192.8.0.2 (Serial 2/0) e 200.10.51.1 (Serial 3/0).</p>
+        
+        <h3 class="text">Router 3</h3>
+        <p class="text">Il Router 3 è la porta d'ingresso per la rete esterna e comunica con le altre reti tramite l'indirizzo 200.100.50.1 sulla Serial 2/0 e 200.10.51.1 sulla Serial 3/0.</p>
+        
+        <h3 class="text">Tabella Indirizzi IP</h3>
+        <table style="width:100%; border: 1px solid white; margin: 20px auto;">
+            <thead>
+                <tr>
+                    <th>Router</th>
+                    <th>Interfaccia</th>
+                    <th>Indirizzo IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Router 1</td>
+                    <td>Serial 2/0</td>
+                    <td>192.8.0.2</td>
+                </tr>
+                <tr>
+                    <td>Router 1</td>
+                    <td>Serial 3/0</td>
+                    <td>192.8.0.1</td>
+                </tr>
+                <tr>
+                    <td>Router 2</td>
+                    <td>Serial 2/0</td>
+                    <td>192.8.0.2</td>
+                </tr>
+                <tr>
+                    <td>Router 2</td>
+                    <td>Serial 3/0</td>
+                    <td>200.10.51.1</td>
+                </tr>
+                <tr>
+                    <td>Router 3</td>
+                    <td>Serial 2/0</td>
+                    <td>200.100.50.1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="router.html" class="btn">Torna alla pagina principale</a>
+    </div>
+</body>
+</html>
 
