@@ -22,7 +22,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .container {
-            max-width: 1000px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -144,54 +144,21 @@
         <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
     </nav>
     <div class="container">
-        <h2 class="text">Le 3 Sedi del Progetto</h2>
-        <p class="text">Il progetto di rete dell'officina meccanica è composto da tre sedi principali, ognuna delle quali ha un'area dedicata per specifiche funzioni: Amministrazione, Officina e Magazzino. Di seguito, vengono illustrate le caratteristiche di ciascuna sede, la loro configurazione e le connessioni.</p>
-
-        <h3 class="text">1. Amministrazione</h3>
-        <p class="text">La sede dell'Amministrazione è responsabile della gestione delle attività aziendali e amministrative. Tutti i dispositivi in questa sede sono configurati con indirizzi IP statici, con il gateway predefinito impostato a <code>192.168.2.1</code>. La rete è collegata ad uno switch, che a sua volta è connesso al router, garantendo così una comunicazione efficiente e stabile. Di seguito, un riepilogo della configurazione:</p>
-        <table style="margin: 20px auto; border-collapse: collapse; width: 80%; text-align: left;">
+        <h2 class="text">Le Sedi del Progetto</h2>
+        <p class="text">Il progetto prevede tre sedi principali, ognuna con una propria area funzionale all'interno dell'officina meccanica. Le sedi sono amministrazione, officina e magazzino, tutte interconnesse tramite una rete configurata in modo da garantire efficienza e sicurezza.</p>
+        
+        <h3 class="text">1. Sede Amministrazione</h3>
+        <p class="text">La sede amministrativa gestisce la parte burocratica e finanziaria dell'officina. In questa sede, tutti i dispositivi sono collegati a uno switch, che è a sua volta connesso al router centrale. Inoltre, è presente un server DNS che fornisce il servizio di risoluzione dei nomi a livello di rete. La configurazione dei dispositivi è la seguente:</p>
+        <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
             <thead>
                 <tr>
-                    <th style="padding: 10px; background-color: #444; color: white;">Dispositivo</th>
-                    <th style="padding: 10px; background-color: #444; color: white;">Indirizzo IP</th>
-                    <th style="padding: 10px; background-color: #444; color: white;">Gateway</th>
-                    <th style="padding: 10px; background-color: #444; color: white;">Connessione</th>
+                    <th>Dispositivo</th>
+                    <th>Indirizzo IP</th>
+                    <th>Gateway</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="padding: 8px; background-color: #222;">PC Amministrativo</td>
-                    <td style="padding: 8px; background-color: #222;">192.168.2.10</td>
-                    <td style="padding: 8px; background-color: #222;">192.168.2.1</td>
-                    <td style="padding: 8px; background-color: #222;">Switch</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; background-color: #333;">Stampante</td>
-                    <td style="padding: 8px; background-color: #333;">192.168.2.20</td>
-                    <td style="padding: 8px; background-color: #333;">192.168.2.1</td>
-                    <td style="padding: 8px; background-color: #333;">Switch</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; background-color: #222;">PC Direzione</td>
-                    <td style="padding: 8px; background-color: #222;">192.168.2.30</td>
-                    <td style="padding: 8px; background-color: #222;">192.168.2.1</td>
-                    <td style="padding: 8px; background-color: #222;">Switch</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 class="text">2. Officina</h3>
-        <p class="text">Nella sede dell'Officina, i dispositivi sono anch'essi configurati con indirizzi IP statici, collegati allo stesso switch, e il gateway predefinito è impostato a <code>192.168.2.1</code>. La rete dell'Officina è separata dalle altre aree per garantire una maggiore sicurezza e prestazioni ottimali.</p>
-        <!-- Potresti inserire una tabella simile per l'officina -->
-
-        <h3 class="text">3. Magazzino</h3>
-        <p class="text">Il Magazzino è l'area in cui vengono gestiti i materiali e le risorse. Come per le altre sedi, tutti i dispositivi hanno indirizzi IP statici, con gateway a <code>192.168.2.1</code>, e sono collegati allo stesso switch per garantire una comunicazione fluida.</p>
-        <!-- Potresti inserire una tabella simile per il magazzino -->
-
-        <img src="rete-officina.png" alt="Schema della rete dell'officina" class="network-image">
-
-        <a href="pagina3.html" class="btn">Prossima pagina</a>
-    </div>
-</body>
-</html>
+                    <td>PC Fisso 1</td>
+       
 
