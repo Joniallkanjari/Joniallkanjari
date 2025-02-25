@@ -121,7 +121,7 @@
             font-size: 1.5rem;
         }
 
-        /* Scie dorate ai lati dello schermo (visibili più chiaramente) */
+        /* Scie dorate ai lati dello schermo */
         .golden-trail {
             position: absolute;
             top: 0;
@@ -130,9 +130,9 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.4), rgba(255, 215, 0, 0.1));
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat;
+            opacity: 0.1;
             animation: trailMove 5s infinite linear;
-            opacity: 0.5;
         }
 
         @keyframes trailMove {
@@ -146,7 +146,7 @@
 
         /* Effetto scia del cursore */
         body {
-            cursor: url('https://cdn-icons-png.flaticon.com/128/2920/2920375.png'), auto; /* Prova un cursore personalizzato visibile */
+            cursor: url('https://upload.wikimedia.org/wikipedia/commons/3/32/Golden_cursor_animated.gif'), auto;
         }
     </style>
 </head>
@@ -166,6 +166,9 @@
         <p>Torna alla prima pagina</p>
         <a href="index.html" class="btn">HOME</a>
     </div>
+</body>
+</html>
+
 </body>
 </html>
 
