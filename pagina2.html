@@ -13,27 +13,8 @@
             color: white;
             text-align: center;
             overflow-x: hidden;
-            cursor: none; /* Nascondiamo il cursore di default */
             position: relative;
         }
-
-        /* Aggiungiamo l'animazione di sfumatura dorata sul background */
-        @keyframes goldenMove {
-            0% {
-                background: #1a1a1a;
-            }
-            50% {
-                background: linear-gradient(45deg, rgba(255, 215, 0, 0.6), rgba(255, 215, 0, 0.2));
-            }
-            100% {
-                background: #1a1a1a;
-            }
-        }
-
-        body {
-            animation: goldenMove 4s infinite alternate; /* Aggiungi l'animazione di sfumatura */
-        }
-
         header {
             padding: 20px;
             font-size: 3rem;
@@ -45,7 +26,6 @@
             border-bottom: 2px solid #444;
             animation: shine 2s ease-in-out infinite;
         }
-
         @keyframes shine {
             0% {
                 text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
@@ -57,7 +37,6 @@
                 text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
             }
         }
-
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -69,18 +48,6 @@
             transform: translateY(20px);
             animation: fadeIn 1s ease-out forwards;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .btn {
             display: inline-block;
             padding: 12px 25px;
@@ -95,16 +62,24 @@
             text-decoration: none;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-
         .btn:hover {
             background-color: #ff1a5e;
             transform: scale(1.1);
         }
-
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 10px; /* Distanza tra i bottoni più simile al primo codice */
             margin-top: 30px;
             padding: 20px;
             background: rgba(0, 0, 0, 0.3);
@@ -113,16 +88,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             transition: 0.3s ease-in-out;
         }
-
         nav:hover {
             transform: scale(1.05);
         }
-
         .menu-button {
             background-color: #444;
             color: #fff;
-            padding: 12px 24px;
-            border-radius: 18px;
+            padding: 12px 24px; /* Ridotto leggermente per forma meno tonda */
+            border-radius: 18px; /* Meno arrotondati ma comunque tondi */
             font-size: 1rem;
             font-weight: 500;
             text-transform: capitalize;
@@ -132,50 +105,53 @@
             transition: 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 10px; /* Spazio tra testo e icona */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
+            text-decoration: none; /* Rimuove la sottolineatura */
         }
-
         .menu-button:hover {
             background-color: #ff477e;
             transform: translateY(-3px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
-
         .menu-button:focus {
             outline: none;
         }
-
         .icon {
             font-size: 1.5rem;
         }
 
-        /* Aggiungiamo l'effetto scia dorata al cursore */
-        .cursor {
+        /* Scie dorate ai lati dello schermo */
+        .golden-trail {
             position: absolute;
-            background: rgba(255, 215, 0, 0.8);
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            transform: scale(0.5);
-            animation: trail 0.5s ease-out infinite;
+            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat;
+            opacity: 0.1;
+            animation: trailMove 5s infinite linear;
         }
 
-        @keyframes trail {
+        @keyframes trailMove {
             0% {
-                opacity: 1;
-                transform: scale(0.5);
+                background-position: 0 0, 100% 100%;
             }
             100% {
-                opacity: 0;
-                transform: scale(1.5);
+                background-position: 100% 100%, 0 0;
             }
+        }
+
+        /* Effetto scia del cursore */
+        body {
+            cursor: url('https://upload.wikimedia.org/wikipedia/commons/3/32/Golden_cursor_animated.gif'), auto;
         }
     </style>
 </head>
 <body>
+    <div class="golden-trail"></div> <!-- Aggiunta scia dorata sullo sfondo -->
     <header>MENU'</header>
     <nav>
         <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
@@ -190,16 +166,6 @@
         <p>Torna alla prima pagina</p>
         <a href="index.html" class="btn">HOME</a>
     </div>
-    <div class="cursor"></div> <!-- Elemento della scia -->
-    <script>
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.pageX - 8}px`; 
-            cursor.style.top = `${e.pageY - 8}px`;
-        });
-    </script>
 </body>
 </html>
-
-
 
