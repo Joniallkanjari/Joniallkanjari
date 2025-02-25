@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP - Progetto Rete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .network-image {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            animation: fadeInImage 1.2s ease-out 0.5s forwards;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1rem;
+            background: #ff477e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #ff1a5e;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>Gestione FTP</header>
+    <nav>
+        <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
+        <a href="sedi.html" class="menu-button">📍 <span>Sedi</span></a>
+        <a href="switch.html" class="menu-button">🔄 <span>Switch</span></a>
+        <a href="router.html" class="menu-button">📡 <span>Router</span></a>
+        <a href="ftp.html" class="menu-button">📂 <span>FTP</span></a>
+        <a href="conclusioni.html" class="menu-button">🏁 <span>Conclusioni</span></a>
+    </nav>
+    <div class="container">
+        <h2 class="text">Configurazione FTP</h2>
+        <p class="text">Nel server della sede amministrativa è stato attivato il servizio FTP per la gestione e la condivisione dei file.
+        Sono stati creati due tipi di utenti con diversi livelli di accesso:</p>
+        <ul class="text" style="text-align: left; margin-left: 30px;">
+            <li><strong>Meccanico:</strong> può solo leggere i file (READ).</li>
+            <li><strong>Amministratore:</strong> ha accesso completo ai file: lettura, scrittura ed eliminazione (READ, WRITE, DELETE).</li>
+        </ul>
+        <p class="text">Questa configurazione garantisce un accesso sicuro e controllato ai dati, mantenendo l'integrità delle informazioni sensibili.</p>
+        <img src="ftp_server.png" alt="Schema FTP" class="network-image">
+        <a href="pagina2.html" class="btn">Menù</a>
+    </div>
+</body>
+</html>
 
