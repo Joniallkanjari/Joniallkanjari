@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduzione - Progetto Rete</title>
+    <title>Conclusioni - Progetto Rete</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,58 +32,15 @@
             transform: translateY(20px);
             animation: fadeIn 1s ease-out forwards;
         }
-        .network-image {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 30px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-            transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
-            opacity: 0;
-            animation: fadeInImage 1.2s ease-out 0.5s forwards;
-        }
-        .network-image:hover {
-            transform: scale(1.05);
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInImage {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
         .text {
             opacity: 0;
             transform: translateY(20px);
             animation: textFadeIn 1s ease-out 0.3s forwards;
         }
         @keyframes textFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px) scale(0.9);
-            }
-            50% {
-                opacity: 0.5;
-                transform: translateY(0px) scale(1.05);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0px) scale(1);
-            }
+            0% { opacity: 0; transform: translateY(-20px) scale(0.9); }
+            50% { opacity: 0.5; transform: translateY(0px) scale(1.05); }
+            100% { opacity: 1; transform: translateY(0px) scale(1); }
         }
         nav {
             display: flex;
@@ -114,10 +71,15 @@
             background: rgba(255, 255, 255, 0.4);
             transform: scale(1.1);
         }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            margin-top: 20px;
             font-size: 1rem;
             background: #ff477e;
             color: white;
@@ -130,16 +92,6 @@
         .btn:hover {
             background: #ff1a5e;
             transform: scale(1.1);
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
@@ -155,8 +107,17 @@
     </nav>
     <div class="container">
         <h2 class="text">Conclusioni</h2>
-        <p class="text">Nel corso di questo progetto, siamo riusciti a realizzare una rete strutturata ed efficiente per l'officina meccanica, garantendo una connessione stabile e sicura tra le tre aree principali: Amministrazione, Officina e Magazzino.Abbiamo implementato un routing dinamico RIP, permettendo ai dispositivi di comunicare tra loro senza la necessità di configurazioni manuali, rendendo la rete più scalabile e reattiva ai cambiamenti.Sul server dell'Amministrazione, abbiamo attivato un servizio FTP per la gestione centralizzata dei file, assegnando permessi differenziati tra utenti: i meccanici possono accedere ai file in sola lettura, mentre l’amministratore ha pieno controllo sui dati.Grazie a questi elementi, il progetto offre una soluzione affidabile, ben organizzata e funzionale, migliorando la comunicazione e l'efficienza dell'intera infrastruttura. Un ottimo lavoro che dimostra una gestione attenta della rete e delle sue risorse! </p>
-        <a href="pagina2.html" class="btn">Menù</a>
+        <p class="text">
+            Nel corso di questo progetto, siamo riusciti a realizzare una rete strutturata ed efficiente per l'officina meccanica, garantendo una connessione stabile e sicura tra le tre aree principali: Amministrazione, Officina e Magazzino.
+            Abbiamo implementato un routing dinamico RIP, permettendo ai dispositivi di comunicare tra loro senza la necessità di configurazioni manuali, rendendo la rete più scalabile e reattiva ai cambiamenti.
+            Sul server dell'Amministrazione, abbiamo attivato un servizio FTP per la gestione centralizzata dei file, assegnando permessi differenziati tra utenti: i meccanici possono accedere ai file in sola lettura, mentre l’amministratore ha pieno controllo sui dati.
+            Grazie a questi elementi, il progetto offre una soluzione affidabile, ben organizzata e funzionale, migliorando la comunicazione e l'efficienza dell'intera infrastruttura. Un ottimo lavoro che dimostra una gestione attenta della rete e delle sue risorse!
+        </p>
+        <div class="btn-container">
+            <a href="pagina2.html" class="btn">Menù</a>
+            <a href="progetto.pkt" class="btn" download>Download Progetto</a>
+        </div>
     </div>
 </body>
 </html>
+
