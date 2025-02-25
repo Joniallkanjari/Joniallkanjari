@@ -233,31 +233,12 @@
         </table>
 
         <h3 class="text">3. Sede Magazzino</h3>
-        <p class="text">Infine, la sede del magazzino gestisce l'inventario dei pezzi e degli strumenti. Anche qui, i dispositivi sono configurati con indirizzi statici e collegati al sistema centrale tramite uno switch.</p>
+        <p class="text">Nella sede del magazzino, i dispositivi, come i PC e gli scanner di codici a barre, sono configurati per ricevere automaticamente un indirizzo IP dal server DHCP presente nella rete. Questo significa che, anziché utilizzare indirizzi IP statici preconfigurati, ogni dispositivo ottiene un indirizzo IP temporaneo ogni volta che si collega alla rete. Questo approccio consente una gestione più flessibile e scalabile degli indirizzi IP, specialmente in ambienti dove i dispositivi possono cambiare frequentemente.In questo modo, l'assegnazione degli indirizzi IP avviene in modo dinamico, con ogni dispositivo che riceve un IP valido e il gateway per comunicare correttamente con la rete locale e la rete esterna, se necessario. L'uso del DHCP semplifica l'amministrazione della rete, evitando conflitti di indirizzi IP e riducendo la necessità di configurazioni manuali.</p>
         <table border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse; color: white;">
-            <thead>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>Indirizzo IP</th>
-                    <th>Gateway</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PC Magazzino</td>
-                    <td>192.168.4.2</td>
-                    <td>192.168.4.1</td>
-                </tr>
-                <tr>
-                    <td>Scanner Codici</td>
-                    <td>192.168.4.3</td>
-                    <td>192.168.4.1</td>
-                </tr>
-            </tbody>
+          
         </table>
 
         <a href="pagina2.html" class="btn">Menu</a>
     </div>
 </body>
 </html>
-
