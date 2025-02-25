@@ -145,16 +145,16 @@
     </nav>
     <div class="container">
         <h2 class="text">Configurazione dei Router</h2>
-        <p class="text">In questo progetto, sono stati utilizzati tre router per collegare le tre aree principali: amministrazione, officina e magazzino. Ogni router è configurato con il protocollo di routing dinamico RIP per consentire la comunicazione tra le reti.</p>
+        <p class="text">In questo progetto, sono stati utilizzati tre router per collegare le tre aree principali: amministrazione, officina e magazzino. Ogni router è configurato con il protocollo di routing dinamico RIP per consentire la comunicazione tra le reti. I router sono interconnessi tra loro in modo da creare una rete distribuita senza un punto centrale.</p>
         
-        <h3 class="text">Router 1</h3>
-        <p class="text">Il Router 1 collega le reti 192.8.0.0/24 (Amministrazione) e 192.168.2.0/24 (Officina). Ha come indirizzi di interfaccia 192.8.0.2 sulla Serial 2/0 e 192.8.0.1 sulla Serial 3/0.</p>
+        <h3 class="text">Router 0 (Magazzino)</h3>
+        <p class="text">Il Router 0 è connesso alle reti 192.8.0.0, 192.168.3.0, 200.10.51.0, e 200.100.50.0. Ha come indirizzi di interfaccia IPv4 192.8.0.1 sulla Serial 2/0 e 200.100.50.2 sulla Serial 3/0.</p>
         
-        <h3 class="text">Router 2</h3>
-        <p class="text">Il Router 2 collega la rete 192.168.3.0/24 (Magazzino) e 200.100.50.0/24 (Router di collegamento). Le interfacce hanno indirizzi 192.8.0.2 (Serial 2/0) e 200.10.51.1 (Serial 3/0).</p>
+        <h3 class="text">Router 1 (Officina)</h3>
+        <p class="text">Il Router 1 è connesso alle reti 192.168.1.0, 200.10.51.0, e 200.100.50.0. Le sue interfacce hanno come indirizzi IPv4 200.100.50.1 sulla Serial 2/0 e 200.10.51.1 sulla Serial 3/0.</p>
         
-        <h3 class="text">Router 3</h3>
-        <p class="text">Il Router 3 è la porta d'ingresso per la rete esterna e comunica con le altre reti tramite l'indirizzo 200.100.50.1 sulla Serial 2/0 e 200.10.51.1 sulla Serial 3/0.</p>
+        <h3 class="text">Router 2 (Amministrazione)</h3>
+        <p class="text">Il Router 2 è connesso alle reti 192.8.0.0, 192.168.2.0, e 200.10.51.0. Ha come indirizzi di interfaccia IPv4 192.8.0.2 sulla Serial 2/0 e 200.10.51.2 sulla Serial 3/0.</p>
         
         <h3 class="text">Tabella Indirizzi IP</h3>
         <table style="width:100%; border: 1px solid white; margin: 20px auto;">
@@ -167,34 +167,39 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Router 1</td>
+                    <td>Router 0</td>
                     <td>Serial 2/0</td>
-                    <td>192.8.0.2</td>
-                </tr>
-                <tr>
-                    <td>Router 1</td>
-                    <td>Serial 3/0</td>
                     <td>192.8.0.1</td>
                 </tr>
                 <tr>
-                    <td>Router 2</td>
-                    <td>Serial 2/0</td>
-                    <td>192.8.0.2</td>
+                    <td>Router 0</td>
+                    <td>Serial 3/0</td>
+                    <td>200.100.50.2</td>
                 </tr>
                 <tr>
-                    <td>Router 2</td>
+                    <td>Router 1</td>
+                    <td>Serial 2/0</td>
+                    <td>200.100.50.1</td>
+                </tr>
+                <tr>
+                    <td>Router 1</td>
                     <td>Serial 3/0</td>
                     <td>200.10.51.1</td>
                 </tr>
                 <tr>
-                    <td>Router 3</td>
+                    <td>Router 2</td>
                     <td>Serial 2/0</td>
-                    <td>200.100.50.1</td>
+                    <td>192.8.0.2</td>
+                </tr>
+                <tr>
+                    <td>Router 2</td>
+                    <td>Serial 3/0</td>
+                    <td>200.10.51.2</td>
                 </tr>
             </tbody>
         </table>
 
-        <a href="router.html" class="btn">Torna alla pagina principale</a>
+        <a href="pagina2.html" class="btn">Menù</a>
     </div>
 </body>
 </html>
