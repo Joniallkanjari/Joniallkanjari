@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FTP - Progetto Rete</title>
+    <title>Switch - Progetto Rete</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,6 +42,48 @@
             transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
             opacity: 0;
             animation: fadeInImage 1.2s ease-out 0.5s forwards;
+        }
+        .network-image:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textFadeIn 1s ease-out 0.3s forwards;
+        }
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(0px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1);
+            }
         }
         nav {
             display: flex;
@@ -92,7 +134,7 @@
     </style>
 </head>
 <body>
-    <header>FTP - Progetto Rete</header>
+    <header>FTP</header>
     <nav>
         <a href="introduzione.html" class="menu-button">🏠 <span>Introduzione</span></a>
         <a href="sedi.html" class="menu-button">📍 <span>Sedi</span></a>
@@ -109,10 +151,8 @@
             <li><strong>Utente "amministratore"</strong>: ha i permessi completi per leggere, scrivere ed eliminare file (READ, WRITE, DELETE).</li>
         </ul>
         <p class="text">Questa configurazione garantisce un accesso sicuro e limitato ai dati, permettendo agli utenti di visualizzare solo i file necessari senza la possibilità di modificarli, mentre l'amministratore mantiene il pieno controllo.</p>
-        <img src="ftpu.png" alt="Configurazione FTP" class="network-image">
-        <a href="pagina2.html" class="btn">Menù</a>
+        <img src="ftpu.png" alt="Immagine rete con switch" class="network-image">
+          <a href="pagina2.html" class="btn">Menù</a>
     </div>
 </body>
 </html>
-
-
