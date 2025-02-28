@@ -3,85 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Tuo Shop Online</title>
+    <title>Il Tuo Shop Elegante</title>
     <style>
+        /* Body */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #fff;
+            color: #333;
         }
 
+        /* Header */
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
+            background-color: #f4e1d2; /* Rosa pastello antico */
+            color: #c0c0c0; /* Argento */
+            padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .navbar .logo {
-            font-size: 24px;
+            font-size: 36px;
+            font-family: 'Cursive', sans-serif;
+            color: #c0c0c0;
+            text-align: center;
+            letter-spacing: 2px;
         }
 
-        .search-bar {
-            padding: 5px;
-            width: 200px;
-        }
-
+        /* Menu (Categorie) */
         .menu {
             position: relative;
         }
 
         .menu-icon {
             font-size: 30px;
+            color: #c0c0c0;
             cursor: pointer;
         }
 
         .categories {
             display: none;
             position: absolute;
-            top: 30px;
-            right: 0;
-            background-color: #333;
-            color: white;
+            left: 0;
+            top: 35px;
+            background-color: #f0e6d6; /* Un tono di rosa più chiaro */
+            color: #333;
+            padding: 15px;
             border-radius: 5px;
-            padding: 10px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .categories ul {
             list-style: none;
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
 
         .categories li {
-            margin: 10px 0;
+            padding: 10px 0;
         }
 
         .categories li a {
-            color: white;
+            color: #333;
             text-decoration: none;
         }
 
+        .categories li a:hover {
+            color: #c0c0c0;
+        }
+
+        .search-bar {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+        }
+
+        /* Sezione Nuovi Arrivi */
         .new-arrivals {
-            padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            padding: 40px 30px;
+        }
+
+        .new-arrivals h2 {
+            font-size: 28px;
+            color: #c0c0c0;
+            margin-bottom: 20px;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
         }
 
         .product {
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
         }
 
         .product img {
@@ -91,25 +125,29 @@
         }
 
         .product h3 {
+            font-size: 20px;
             margin: 10px 0;
-        }
-
-        .product p {
             color: #333;
         }
 
+        .product p {
+            color: #c0c0c0;
+        }
+
         .product button {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+            background-color: #c0c0c0;
+            color: #fff;
+            padding: 10px 20px;
             border: none;
-            cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
         }
 
         .product button:hover {
-            background-color: #555;
+            background-color: #a0a0a0;
         }
+
     </style>
 </head>
 <body>
@@ -117,7 +155,6 @@
     <header>
         <div class="navbar">
             <div class="logo">Il Tuo Shop</div>
-            <input type="text" class="search-bar" placeholder="Cerca prodotti...">
             <div class="menu">
                 <div class="menu-icon" onclick="toggleMenu()">&#x22EE;</div> <!-- Tre puntini -->
                 <div class="categories" id="categories">
@@ -126,28 +163,39 @@
                         <li><a href="#">Jeans</a></li>
                         <li><a href="#">Scarpe</a></li>
                         <li><a href="#">Accessori</a></li>
+                        <li><a href="#">Promozioni</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="search">
+                <button onclick="toggleSearch()">
+                    🔍
+                </button>
+                <input type="text" class="search-bar" id="search-bar" placeholder="Cerca prodotti...">
             </div>
         </div>
     </header>
 
-    <!-- Sezione "Nuovi Arrivi" -->
+    <!-- Sezione Nuovi Arrivi -->
     <section class="new-arrivals">
         <h2>Nuovi Arrivi</h2>
         <div class="product-grid">
-            <!-- Esempio di prodotto -->
             <div class="product">
                 <img src="path-to-your-image.jpg" alt="Prodotto 1">
                 <h3>Prodotto 1</h3>
                 <p>€50</p>
                 <button>Aggiungi al Carrello</button>
             </div>
-            <!-- Altri prodotti -->
             <div class="product">
                 <img src="path-to-your-image.jpg" alt="Prodotto 2">
                 <h3>Prodotto 2</h3>
                 <p>€40</p>
+                <button>Aggiungi al Carrello</button>
+            </div>
+            <div class="product">
+                <img src="path-to-your-image.jpg" alt="Prodotto 3">
+                <h3>Prodotto 3</h3>
+                <p>€60</p>
                 <button>Aggiungi al Carrello</button>
             </div>
         </div>
@@ -157,6 +205,11 @@
         function toggleMenu() {
             const categories = document.getElementById('categories');
             categories.style.display = categories.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
