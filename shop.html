@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Tuo Shop Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+        }
+
+        .search-bar {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .menu {
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .categories ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .categories li {
+            margin: 10px 0;
+        }
+
+        .categories li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .new-arrivals {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #333;
+        }
+
+        .product button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Il Tuo Shop</div>
+            <input type="text" class="search-bar" placeholder="Cerca prodotti...">
+            <div class="menu">
+                <div class="menu-icon" onclick="toggleMenu()">&#x22EE;</div> <!-- Tre puntini -->
+                <div class="categories" id="categories">
+                    <ul>
+                        <li><a href="#">Top</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Scarpe</a></li>
+                        <li><a href="#">Accessori</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sezione "Nuovi Arrivi" -->
+    <section class="new-arrivals">
+        <h2>Nuovi Arrivi</h2>
+        <div class="product-grid">
+            <!-- Esempio di prodotto -->
+            <div class="product">
+                <img src="path-to-your-image.jpg" alt="Prodotto 1">
+                <h3>Prodotto 1</h3>
+                <p>€50</p>
+                <button>Aggiungi al Carrello</button>
+            </div>
+            <!-- Altri prodotti -->
+            <div class="product">
+                <img src="path-to-your-image.jpg" alt="Prodotto 2">
+                <h3>Prodotto 2</h3>
+                <p>€40</p>
+                <button>Aggiungi al Carrello</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const categories = document.getElementById('categories');
+            categories.style.display = categories.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
