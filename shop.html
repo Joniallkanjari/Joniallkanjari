@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Tuo Shop Elegante</title>
+    <title>Cherry Blossom</title>
     <style>
-        /* Body */
+        /* Font generale */
         body {
             font-family: 'Georgia', serif;
             margin: 0;
@@ -16,21 +16,33 @@
 
         /* Header */
         header {
-            background-color: #f4e1d2; /* Rosa pastello antico */
-            color: #c0c0c0; /* Argento */
+            background-color: #F1D0C7; /* Rosa antico */
+            color: #C0C0C0; /* Argento */
             padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .navbar .logo {
             font-size: 36px;
             font-family: 'Cursive', sans-serif;
-            color: #c0c0c0;
-            text-align: center;
+            color: #C0C0C0;
             letter-spacing: 2px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animazione per il logo */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Menu (Categorie) */
@@ -40,8 +52,13 @@
 
         .menu-icon {
             font-size: 30px;
-            color: #c0c0c0;
+            color: #C0C0C0;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-icon:hover {
+            color: #F1D0C7; /* Cambia colore al passaggio del mouse */
         }
 
         .categories {
@@ -49,10 +66,10 @@
             position: absolute;
             left: 0;
             top: 35px;
-            background-color: #f0e6d6; /* Un tono di rosa più chiaro */
+            background-color: #F9E8D2;
             color: #333;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             width: 250px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -73,30 +90,54 @@
         }
 
         .categories li a:hover {
-            color: #c0c0c0;
+            color: #C0C0C0;
         }
 
+        /* Barra di ricerca */
         .search-bar {
             display: none;
             position: absolute;
             top: 50px;
             right: 0;
             padding: 10px;
-            width: 200px;
-            border: 1px solid #c0c0c0;
-            border-radius: 5px;
+            width: 250px;
+            border: 1px solid #C0C0C0;
+            border-radius: 25px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .search-bar:focus {
+            border-color: #F1D0C7; /* Rosa antico */
+            outline: none;
+        }
+
+        .search-bar-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .search-bar-button:hover {
+            transform: scale(1.2);
         }
 
         /* Sezione Nuovi Arrivi */
         .new-arrivals {
-            background-color: #f9f9f9;
+            background-color: #F9F9F9;
             padding: 40px 30px;
+            margin-top: 40px;
         }
 
         .new-arrivals h2 {
             font-size: 28px;
-            color: #c0c0c0;
+            color: #C0C0C0;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .product-grid {
@@ -107,21 +148,27 @@
 
         .product {
             background-color: #fff;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
 
         .product img {
             width: 100%;
             height: auto;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
         }
 
         .product h3 {
@@ -131,21 +178,38 @@
         }
 
         .product p {
-            color: #c0c0c0;
+            color: #C0C0C0;
         }
 
         .product button {
-            background-color: #c0c0c0;
+            background-color: #C0C0C0;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 15px;
+            transition: background-color 0.3s ease;
         }
 
         .product button:hover {
-            background-color: #a0a0a0;
+            background-color: #F1D0C7;
+        }
+
+        /* Transizioni fluide e animazioni */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .new-arrivals {
+            animation: slideIn 0.8s ease-out;
         }
 
     </style>
@@ -154,7 +218,7 @@
     <!-- Barra di navigazione -->
     <header>
         <div class="navbar">
-            <div class="logo">Il Tuo Shop</div>
+            <div class="logo">Cherry Blossom</div>
             <div class="menu">
                 <div class="menu-icon" onclick="toggleMenu()">&#x22EE;</div> <!-- Tre puntini -->
                 <div class="categories" id="categories">
@@ -168,7 +232,7 @@
                 </div>
             </div>
             <div class="search">
-                <button onclick="toggleSearch()">
+                <button class="search-bar-button" onclick="toggleSearch()">
                     🔍
                 </button>
                 <input type="text" class="search-bar" id="search-bar" placeholder="Cerca prodotti...">
@@ -214,3 +278,4 @@
     </script>
 </body>
 </html>
+
