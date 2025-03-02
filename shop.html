@@ -29,54 +29,23 @@
       padding: 20px 0;
       position: relative;
       z-index: 2;
+    }
+
+    /* Emerald green border with brand name in it */
+    .brand-border {
+      position: relative;
       border-top: 2px solid #00bfae; /* Thin top border (emerald crystal green) */
-    }
-
-    nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      padding: 10px;
     }
 
-    .logo {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ffffff;
-      letter-spacing: 2px;
+    .brand-border h1 {
+      font-size: 2rem;
       font-family: 'Playfair Display', serif; /* Elegant font */
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .nav-links {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1rem;
-      text-transform: uppercase;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #00bfae; /* Light green (aqua) */
-    }
-
-    .home-icon {
-      font-size: 1.5rem;
-      color: #ffffff;
-      text-decoration: none;
+      color: #00bfae;
+      letter-spacing: 2px;
     }
 
     /* Hero section with video background */
@@ -213,8 +182,10 @@
 </head>
 <body>
   <header>
+    <div class="brand-border">
+      <h1>Nymphea</h1>
+    </div>
     <nav>
-      <div class="logo">Nymphea</div>
       <ul class="nav-links">
         <li><a href="#" class="home-icon">&#127968;</a></li> <!-- Home icon -->
         <li><a href="#">Prodotti</a></li>
@@ -226,8 +197,7 @@
 
   <section class="hero">
     <video class="hero-video" autoplay loop muted>
-      <!-- Replace with your video file -->
-      <source src="your-video.mp4" type="video/mp4">
+      <source src="videoshop.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -264,3 +234,4 @@
   </footer>
 </body>
 </html>
+
