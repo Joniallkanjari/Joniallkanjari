@@ -23,40 +23,27 @@
       overflow-x: hidden; /* Prevent scrolling if background video is full screen */
     }
 
-    /* Header styles */
+    /* Header and top border */
     header {
-      background-color: transparent;
-      padding: 10px 0; /* Reduced padding */
       position: relative;
       z-index: 2;
+      background-color: transparent;
+      border-bottom: 1px solid #000; /* Thin black border */
     }
 
-    /* Emerald green border with brand name and navigation in it */
-    .brand-border {
-      position: relative;
-      border-top: 2px solid #006d57; /* Emerald dark green border */
+    .header-content {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      padding: 10px;
+      padding: 10px 20px;
     }
 
-    .brand-border h1 {
-      font-size: 3rem; /* Elegant font size */
-      font-family: 'Dancing Script', cursive; /* Font "Dancing Script" for "Nymphea" */
-      color: #32c6a6; /* Verde acqua */
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
-    .brand-border nav {
-      position: absolute;
-      left: 10px;
+    .header-content nav {
       display: flex;
       gap: 20px;
     }
 
-    .brand-border nav a {
+    .header-content nav a {
       font-size: 1.1rem;
       color: #006d57;
       text-decoration: none;
@@ -64,8 +51,16 @@
       letter-spacing: 1px;
     }
 
-    .brand-border nav a:hover {
+    .header-content nav a:hover {
       color: #004c39; /* Darker emerald shade on hover */
+    }
+
+    .header-content h1 {
+      font-size: 3rem; /* Elegant font size */
+      font-family: 'Dancing Script', cursive; /* Font "Dancing Script" for "Nymphea" */
+      color: #32c6a6; /* Verde acqua */
+      letter-spacing: 1px;
+      margin: 0;
     }
 
     /* Hero section with video background */
@@ -106,7 +101,34 @@
       border-color: transparent;
     }
 
-    /* Footer styles */
+    /* Section for the latest arrivals below the video */
+    .latest-arrivals {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .arrival-box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .arrival-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .arrival-box p {
+      font-size: 1rem;
+      color: #777;
+    }
+
     footer {
       background-color: #004f3c; /* Marine green */
       color: white;
@@ -122,13 +144,13 @@
 </head>
 <body>
   <header>
-    <div class="brand-border">
+    <div class="header-content">
       <nav>
         <a href="#">Contatti</a>
         <a href="#">Chi Siamo</a>
         <a href="#">Prodotti</a>
       </nav>
-      <h1>Nymphea</h1> <!-- Nome del brand con il nuovo font -->
+      <h1>Nymphea</h1> <!-- Nome del brand con il font elegante e corsivo -->
     </div>
   </header>
 
@@ -144,11 +166,28 @@
     <button class="cta-btn">Scopri di più</button>
   </section>
 
+  <!-- Riquadri degli ultimi arrivi -->
+  <section class="latest-arrivals">
+    <div class="arrival-box">
+      <h3>Ultimo Arrivo 1</h3>
+      <p>Descrizione del prodotto 1</p>
+    </div>
+    <div class="arrival-box">
+      <h3>Ultimo Arrivo 2</h3>
+      <p>Descrizione del prodotto 2</p>
+    </div>
+    <div class="arrival-box">
+      <h3>Ultimo Arrivo 3</h3>
+      <p>Descrizione del prodotto 3</p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Nymphea. Tutti i diritti riservati.</p>
   </footer>
 </body>
 </html>
+
 
 
 
