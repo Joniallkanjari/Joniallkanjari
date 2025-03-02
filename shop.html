@@ -23,46 +23,6 @@
       overflow-x: hidden; /* Prevent scrolling if background video is full screen */
     }
 
-    /* Header and top border */
-    header {
-      position: relative;
-      z-index: 2;
-      background-color: transparent;
-      border-bottom: 1px solid #000; /* Thin black border */
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .header-content nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    .header-content nav a {
-      font-size: 1.1rem;
-      color: #006d57;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .header-content nav a:hover {
-      color: #004c39; /* Darker emerald shade on hover */
-    }
-
-    .header-content h1 {
-      font-size: 3rem; /* Elegant font size */
-      font-family: 'Dancing Script', cursive; /* Font "Dancing Script" for "Nymphea" */
-      color: #32c6a6; /* Verde acqua */
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
     /* Hero section with video background */
     .hero {
       position: relative;
@@ -83,6 +43,46 @@
       z-index: -1;
     }
 
+    /* Navigation and header text above video */
+    .header-content {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      opacity: 0;
+      animation: fadeIn 2s forwards; /* Fade-in animation */
+    }
+
+    .header-content nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-content nav a {
+      font-size: 1.1rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .header-content nav a:hover {
+      color: #32c6a6; /* Verde acqua su hover */
+    }
+
+    .header-content h1 {
+      font-size: 3rem; /* Elegant font size */
+      font-family: 'Dancing Script', cursive; /* Font "Dancing Script" for "Nymphea" */
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    /* Pulsante "Scopri di più" */
     .cta-btn {
       background-color: transparent;
       border: 2px solid #000; /* Black border */
@@ -93,6 +93,7 @@
       cursor: pointer;
       text-transform: uppercase;
       transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 2;
     }
 
     .cta-btn:hover {
@@ -140,10 +141,28 @@
     footer p {
       font-size: 1rem;
     }
+
+    /* Animation for the header text */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted>
+      <source src="videoshop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation and header text above video -->
     <div class="header-content">
       <nav>
         <a href="#">Contatti</a>
@@ -152,17 +171,8 @@
       </nav>
       <h1>Nymphea</h1> <!-- Nome del brand con il font elegante e corsivo -->
     </div>
-  </header>
 
-  <section class="hero">
-    <video class="hero-video" autoplay loop muted>
-      <source src="videoshop.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <!-- Pulsante "Scopri di più" -->
-  <section style="text-align: center; margin-top: 20px;">
+    <!-- Pulsante "Scopri di più" -->
     <button class="cta-btn">Scopri di più</button>
   </section>
 
@@ -187,6 +197,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
