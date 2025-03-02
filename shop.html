@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nymphea - Eleganza e Natura</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"> <!-- Elegante font corsivo -->
+  <link href="https://fonts.googleapis.com/css2?family=Lovely+Coffee&display=swap" rel="stylesheet"> <!-- Nuovo font "Lovely Coffee" -->
   <style>
     /* Resetting some default styles */
     * {
@@ -42,9 +42,9 @@
     }
 
     .brand-border h1 {
-      font-size: 2rem; /* Elegant font size */
-      font-family: 'Playfair Display', serif; /* Elegant font, corsivo */
-      color: #00bfae; /* Verde acqua */
+      font-size: 2.5rem; /* Elegant font size */
+      font-family: 'Lovely Coffee', cursive; /* Font Lovely Coffee for "Nymphea" */
+      color: #32c6a6; /* Verde acqua */
       letter-spacing: 1px;
       margin: 0;
     }
@@ -143,6 +143,40 @@
       }
     }
 
+    /* Section for "Ultimi Arrivi" */
+    .latest-arrivals {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .arrival-box {
+      background-color: #ffffff;
+      border: 2px solid #006d57; /* Emerald green border */
+      border-radius: 10px;
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .arrival-box:hover {
+      transform: scale(1.05); /* Slightly enlarges the box on hover */
+    }
+
+    .arrival-box h3 {
+      font-size: 1.5rem;
+      color: #006d57;
+      margin-bottom: 10px;
+    }
+
+    .arrival-box p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     /* Footer styles */
     footer {
       background-color: #004f3c; /* Marine green */
@@ -182,10 +216,27 @@
     </div>
   </section>
 
+  <!-- Ultimi Arrivi Section -->
+  <section class="latest-arrivals">
+    <div class="arrival-box">
+      <h3>Nuovo Arrivo 1</h3>
+      <p>Dettagli prodotto</p>
+    </div>
+    <div class="arrival-box">
+      <h3>Nuovo Arrivo 2</h3>
+      <p>Dettagli prodotto</p>
+    </div>
+    <div class="arrival-box">
+      <h3>Nuovo Arrivo 3</h3>
+      <p>Dettagli prodotto</p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Nymphea. Tutti i diritti riservati.</p>
   </footer>
 </body>
 </html>
+
 
 
