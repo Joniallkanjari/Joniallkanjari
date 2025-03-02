@@ -42,7 +42,7 @@
     }
 
     .brand-border h1 {
-      font-size: 2.5rem; /* Elegant font size */
+      font-size: 3rem; /* Elegant font size */
       font-family: 'Lovely Coffee', cursive; /* Font Lovely Coffee for "Nymphea" */
       color: #32c6a6; /* Verde acqua */
       letter-spacing: 1px;
@@ -88,93 +88,22 @@
       z-index: -1;
     }
 
-    .hero-content {
-      color: #ffffff;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
-      border-radius: 10px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero-content h1 {
-      font-size: 2.5rem; /* Smaller and more elegant */
-      margin-bottom: 10px;
-      animation: slideIn 1s ease-in-out;
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
     .cta-btn {
-      background-color: #004f3c; /* Dark green (marine) */
-      color: white;
+      background-color: transparent;
+      border: 2px solid #000; /* Black border */
+      color: #000;
       font-size: 1.1rem;
       padding: 15px 30px;
-      border: none;
       border-radius: 30px;
       cursor: pointer;
       text-transform: uppercase;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .cta-btn:hover {
-      background-color: #00372b; /* Slightly darker shade */
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateY(-30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Section for "Ultimi Arrivi" */
-    .latest-arrivals {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      margin-top: 30px;
-      padding: 20px;
-    }
-
-    .arrival-box {
-      background-color: #ffffff;
-      border: 2px solid #006d57; /* Emerald green border */
-      border-radius: 10px;
-      padding: 20px;
-      width: 30%;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .arrival-box:hover {
-      transform: scale(1.05); /* Slightly enlarges the box on hover */
-    }
-
-    .arrival-box h3 {
-      font-size: 1.5rem;
-      color: #006d57;
-      margin-bottom: 10px;
-    }
-
-    .arrival-box p {
-      font-size: 1.1rem;
-      color: #333;
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
     }
 
     /* Footer styles */
@@ -208,28 +137,11 @@
       <source src="videoshop.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
-    <div class="hero-content">
-      <h1>Benvenuti su Nymphea</h1>
-      <p>Eleganza, natura e stile si incontrano.</p>
-      <button class="cta-btn">Scopri di più</button>
-    </div>
   </section>
 
-  <!-- Ultimi Arrivi Section -->
-  <section class="latest-arrivals">
-    <div class="arrival-box">
-      <h3>Nuovo Arrivo 1</h3>
-      <p>Dettagli prodotto</p>
-    </div>
-    <div class="arrival-box">
-      <h3>Nuovo Arrivo 2</h3>
-      <p>Dettagli prodotto</p>
-    </div>
-    <div class="arrival-box">
-      <h3>Nuovo Arrivo 3</h3>
-      <p>Dettagli prodotto</p>
-    </div>
+  <!-- Pulsante "Scopri di più" -->
+  <section style="text-align: center; margin-top: 20px;">
+    <button class="cta-btn">Scopri di più</button>
   </section>
 
   <footer>
