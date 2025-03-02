@@ -26,32 +26,50 @@
     /* Header styles */
     header {
       background-color: transparent;
-      padding: 10px 0;
+      padding: 10px 0; /* Reduced padding */
       position: relative;
       z-index: 2;
     }
 
-    /* Dark emerald green border with brand name in it */
+    /* Emerald green border with brand name and navigation in it */
     .brand-border {
       position: relative;
-      border-top: 2px solid #006f5f; /* Dark emerald crystal green */
+      border-top: 2px solid #006d57; /* Emerald dark green border */
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5px;
+      padding: 10px;
     }
 
     .brand-border h1 {
-      font-size: 1.8rem;
+      font-size: 1.8rem; /* Slightly smaller size for elegance */
       font-family: 'Playfair Display', serif; /* Elegant font */
-      color: #006f5f;
+      color: #006d57; /* Dark emerald green */
       letter-spacing: 1px;
+      margin-right: 20px;
+    }
+
+    .brand-border nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .brand-border nav a {
+      font-size: 1.1rem;
+      color: #006d57;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .brand-border nav a:hover {
+      color: #004c39; /* Darker emerald shade on hover */
     }
 
     /* Hero section with video background */
     .hero {
       position: relative;
-      height: 80vh; /* Increased height for the video background */
+      height: 100vh; /* Full height for the video */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -70,30 +88,30 @@
 
     .hero-content {
       color: #ffffff;
-      padding: 15px 25px;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
-      border-radius: 8px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+      border-radius: 10px;
       animation: fadeIn 2s ease-in-out;
     }
 
     .hero-content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      font-size: 2.5rem; /* Smaller and more elegant */
+      margin-bottom: 10px;
       animation: slideIn 1s ease-in-out;
     }
 
     .hero-content p {
-      font-size: 1rem;
-      margin-bottom: 25px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
     }
 
     .cta-btn {
       background-color: #004f3c; /* Dark green (marine) */
       color: white;
-      font-size: 1rem;
-      padding: 12px 28px;
+      font-size: 1.1rem;
+      padding: 15px 30px;
       border: none;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
       text-transform: uppercase;
       transition: background-color 0.3s ease;
@@ -123,49 +141,6 @@
       }
     }
 
-    /* Section for last arrivals */
-    .arrivals-section {
-      padding: 50px 20px;
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    .arrivals-section h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .arrivals-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .arrival-item {
-      width: 250px;
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .arrival-item img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-
-    .arrival-item h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .arrival-item p {
-      font-size: 1rem;
-      color: #777;
-    }
-
     /* Footer styles */
     footer {
       background-color: #004f3c; /* Marine green */
@@ -183,16 +158,13 @@
 <body>
   <header>
     <div class="brand-border">
+      <nav>
+        <a href="#">Contatti</a>
+        <a href="#">Chi Siamo</a>
+        <a href="#">Prodotti</a>
+      </nav>
       <h1>Nymphea</h1>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#" class="home-icon">&#127968;</a></li> <!-- Home icon -->
-        <li><a href="#">Prodotti</a></li>
-        <li><a href="#">Chi Siamo</a></li>
-        <li><a href="#">Contatti</a></li>
-      </ul>
-    </nav>
   </header>
 
   <section class="hero">
@@ -208,29 +180,9 @@
     </div>
   </section>
 
-  <section class="arrivals-section">
-    <h2>Ultimi Arrivi</h2>
-    <div class="arrivals-grid">
-      <div class="arrival-item">
-        <img src="product1.jpg" alt="Prodotto 1">
-        <h3>Prodotto 1</h3>
-        <p>Descrizione del prodotto</p>
-      </div>
-      <div class="arrival-item">
-        <img src="product2.jpg" alt="Prodotto 2">
-        <h3>Prodotto 2</h3>
-        <p>Descrizione del prodotto</p>
-      </div>
-      <div class="arrival-item">
-        <img src="product3.jpg" alt="Prodotto 3">
-        <h3>Prodotto 3</h3>
-        <p>Descrizione del prodotto</p>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <p>&copy; 2025 Nymphea. Tutti i diritti riservati.</p>
   </footer>
 </body>
 </html>
+
