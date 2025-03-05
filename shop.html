@@ -43,15 +43,15 @@
       z-index: -1;
     }
 
-    /* Navigation and header text above video */
+    /* Navigation and header content above video */
     .header-content {
       position: absolute;
       top: 20px;
       left: 20px;
       z-index: 2;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
+      align-items: center;
+      gap: 20px;
       opacity: 0;
       animation: fadeIn 2s forwards; /* Fade-in animation */
     }
@@ -74,12 +74,9 @@
       color: #32c6a6; /* Verde acqua su hover */
     }
 
-    .header-content h1 {
-      font-size: 3rem; /* Elegant font size */
-      font-family: 'Dancing Script', cursive; /* Font "Dancing Script" for "Nymphea" */
-      color: #fff;
-      letter-spacing: 1px;
-      margin: 0;
+    /* Logo */
+    .logo {
+      height: 60px; /* Modifica l'altezza secondo necessità */
     }
 
     /* Pulsante "Scopri di più" */
@@ -162,14 +159,14 @@
       Your browser does not support the video tag.
     </video>
 
-    <!-- Navigation and header text above video -->
+    <!-- Navigation and header content above video -->
     <div class="header-content">
+      <img src="logo.png" alt="Logo Nymphea" class="logo"> <!-- Inserito il logo come immagine -->
       <nav>
         <a href="#">Contatti</a>
         <a href="#">Chi Siamo</a>
         <a href="#">Prodotti</a>
       </nav>
-      <h1>Nymphea</h1> <!-- Nome del brand con il font elegante e corsivo -->
     </div>
 
     <!-- Pulsante "Scopri di più" -->
