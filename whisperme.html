@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhisperMe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(145deg, #1f1f1f, #4b4b4b);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 2.5rem;
+            color: #d1a800;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1);
+            animation: fadeIn 2s ease-out;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+            font-style: italic;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            animation: slideIn 2s ease-out;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            border: 2px solid #d1a800;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #d1a800;
+        }
+        .input-field {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .input-field:focus {
+            border-color: #d1a800;
+            outline: none;
+            box-shadow: 0 0 10px rgba(209, 168, 0, 0.5);
+        }
+        .submit-btn {
+            background-color: #d1a800;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #b17f00;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: #d1a800;
+            text-decoration: none;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WhisperMe</h1>
+        <p class="tagline">Dove i segreti diventano sussurri, e i sussurri diventano verità.</p>
+    </header>
+    <section>
+        <div class="content">
+            <h2>Confessa in Anonimato</h2>
+            <p>Ti ascoltiamo, senza giudicare, senza domande. I tuoi segreti sono al sicuro qui.</p>
+            <input type="text" class="input-field" placeholder="Il tuo sussurro..." id="confession">
+            <button class="submit-btn">Invia Confessione</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 WhisperMe. Tutti i diritti riservati.</p>
+        <p><a href="#">Termini di servizio</a> | <a href="#">Privacy</a></p>
+    </footer>
+</body>
+</html>
